@@ -68,27 +68,27 @@ class SudokuSolver {
     // Inputs should be valid at this point
     const row = coordinate.charAt(0);
     const col = coordinate.charAt(1);
-    const conflicts = [];
+    const conflictArray = [];
 
     const isRowValid = this.checkRowPlacement(puzzleString, row, col, value);
     const isColValid = this.checkColPlacement(puzzleString, row, col, value);
     const isRegionValid = this.checkRegionPlacement(puzzleString, row, col, value);
 
     if (!isRowValid) {
-      conflicts.push('row');
+      conflictArray.push('row');
     }
     if (!isColValid) {
-      conflicts.push('column');
+      conflictArray.push('column');
     }
     if (!isRegionValid) {
-      conflicts.push('region');
+      conflictArray.push('region');
     }
 
-    if (conflicts.length) {
+    if (conflictArray.length) {
 
       return {
         valid: false,
-        conflicts,
+        conflict: conflictArray,
       };
     }
 

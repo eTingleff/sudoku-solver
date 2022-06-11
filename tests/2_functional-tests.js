@@ -103,7 +103,7 @@ suite('Functional Tests', () => {
         .end((err, res) => {
           assert.deepEqual(res.body, {
             valid: false,
-            conflicts: ['row'],
+            conflict: ['row'],
           });
 
           done();
@@ -121,7 +121,7 @@ suite('Functional Tests', () => {
         .end((err, res) => {
           assert.deepEqual(res.body, {
             valid: false,
-            conflicts: [
+            conflict: [
               'row',
               'region',
             ],
@@ -142,7 +142,7 @@ suite('Functional Tests', () => {
         .end((err, res) => {
           assert.deepEqual(res.body, {
             valid: false,
-            conflicts: [
+            conflict: [
               'row',
               'column',
               'region',
