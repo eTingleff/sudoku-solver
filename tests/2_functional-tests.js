@@ -22,7 +22,7 @@ suite('Functional Tests', () => {
           puzzle: puzzlesAndSolutions[0][0],
         })
         .end((err, res) => {
-          assert.deepEqual(res.body, { puzzle: puzzlesAndSolutions[0][1] });
+          assert.deepEqual(res.body, { solution: puzzlesAndSolutions[0][1] });
 
           done();
         });

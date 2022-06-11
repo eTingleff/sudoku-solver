@@ -26,6 +26,6 @@ module.exports = function (app) {
         return res.json(result);
       }
 
-      return res.json({ puzzle: result });
+      return res.json({ solution: result });
     });
 };
